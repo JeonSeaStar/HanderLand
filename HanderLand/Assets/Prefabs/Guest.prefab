@@ -1,0 +1,224 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3024539998183570299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3024539998183570274}
+  - component: {fileID: 3024539998183570277}
+  - component: {fileID: 3024539998183570276}
+  - component: {fileID: 3024539998183570279}
+  - component: {fileID: 3024539998183570278}
+  - component: {fileID: 3024539998183570297}
+  - component: {fileID: 3024539998183570275}
+  - component: {fileID: 3024539998183570296}
+  m_Layer: 9
+  m_Name: Guest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3024539998183570274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3024539998183570299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.45, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3024539998183570277
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3024539998183570299}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3024539998183570276
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3024539998183570299}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9741b2f62109158408c791adce17ecb1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3024539998183570279
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3024539998183570299}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &3024539998183570278
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3024539998183570299}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3024539998183570297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3024539998183570299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac451bc1122ef1848901dea7e99a9973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviors:
+  - Behavior_name: Move
+    weight: 100
+  - Behavior_name: Navigater
+    weight: 100
+  - Behavior_name: Leave
+    weight: 100
+  - Behavior_name: Stay
+    weight: 100
+  - Behavior_name: Board_Ride
+    weight: 100
+  - Behavior_name: GoToSeat
+    weight: 100
+  - Behavior_name: GoToExit
+    weight: 100
+  - Behavior_name: Use_Shop
+    weight: 100
+  - Behavior_name: SightSeeing_Ride
+    weight: 100
+  - Behavior_name: TakePicture_Ride
+    weight: 100
+  - Behavior_name: ThrowUp
+    weight: 100
+  total: 0
+  behavior:
+    Behavior_name: Move
+    weight: 0
+  gm: {fileID: 0}
+  IsFindPath: 0
+  IsRiding: 0
+  speed: 1
+  direction: 0
+  Guest_Name: 
+  Guest_Think: 
+  Guest_Behavior: 
+  Gauge_Happy_Max: 100
+  Gauge_Happy: 50
+  Gauge_Energy_Max: 100
+  Gauge_Energy: 80
+  Gauge_Hungry_Max: 100
+  Gauge_Hungry: 30
+  Gauge_Thirst_Max: 100
+  Gauge_Thirst: 30
+  Gauge_Sick_Max: 100
+  Gauge_Sick: 0
+  Gauge_Toilet_Max: 100
+  Gauge_Toilet: 10
+  Gauge_Intensity: 0
+  Gauge_Tolerance: 0
+  Record_Ride: 0
+  Record_Food: 0
+  Record_Drink: 0
+  Record_Souvenir: 0
+  TimeRecord: 0
+  Money_InHand: 0
+  Money_Spent: 0
+  Money_AdmissionFees: 0
+  Money_Ride: 0
+  Money_FoodNDrink: 0
+  Money_Souvenir: 0
+--- !u!114 &3024539998183570275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3024539998183570299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6aac479cade0d4abe875962f9a0edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetNode_: {fileID: 0}
+--- !u!114 &3024539998183570296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3024539998183570299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38122bd0ae4708e49add5a0dec3e4dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPosition: {x: 0, y: 0, z: 0}
+  RoadMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  SphereRadius: 0.125
+  SphereDiameter: 0
+  SphereDistance: 1
+  worldX: 10
+  worldY: 2
+  worldZ: 10
