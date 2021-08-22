@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657683, g: 0.49641216, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964127, b: 0.57481843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19869,6 +19869,7 @@ GameObject:
   - component: {fileID: 1780443762}
   - component: {fileID: 1780443763}
   - component: {fileID: 1780443764}
+  - component: {fileID: 1780443765}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -19956,6 +19957,7 @@ MonoBehaviour:
   Park_Money: 0
   Park_Time_Hour: 0
   Park_Time_Min: 0
+  Camera_Size: 10
   Target:
   - {fileID: 1960090490}
   - {fileID: 983035438}
@@ -19974,6 +19976,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ground_Center: {fileID: 343908398654234252, guid: f236e9e69472b3a48b1a85d479e6c822, type: 3}
+--- !u!114 &1780443765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780443761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cef205747a8db9488dbc8ad38af62e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dictionary: {fileID: 0}
 --- !u!114 &1780620862 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8057150383272650909, guid: f5c6ba2017950014eb47335ecb509793, type: 3}

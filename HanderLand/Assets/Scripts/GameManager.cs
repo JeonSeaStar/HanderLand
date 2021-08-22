@@ -29,7 +29,12 @@ public class GameManager : MonoBehaviour
     public float Camera_Size = 10;
 
     public List<GameObject> Target;
+    public List<List<List<GameObject>>> Ground_LIst;
 
+
+
+
+    //에반데 좀더 괜찮은거 찾아봐야될듯
     void Start()
     {
         Physics.IgnoreLayerCollision(9, 11);
@@ -44,20 +49,32 @@ public class GameManager : MonoBehaviour
 
     void Ground_Spawn(int x, int z) // 생성할 월드의 x축 길이, y축 높이 z축 길이
     {
-        Vector3 Ground_Pos = new Vector3(0, 0, 0);
-        for (int i = 0; i < x; i++)
+        Ground_LIst = new List<List<List<GameObject>>>();
+        int y = x > z ? x : z;
+        for (int k = 0; k < y; k++)
         {
-            for (int j = 0; j < z; j++)
+            Ground_LIst.Add(new List<List<GameObject>>());
+            Vector3 Ground_Pos = new Vector3(0, ((float)k)/2, 0);
+            for (int i = 0; i < x; i++)
             {
-                Ground = Instantiate(Ground, Ground_Pos, Quaternion.identity);
-                Ground.name = ("Ground[" + i + ", " + j + "]");
-                Ground.transform.parent = this.transform;
-
-                Ground_Pos.z++; //블럭의 z 크기만큼
+                Ground_LIst[k].Add(new List<GameObject>());
+                for (int j = 0; j < z; j++)
+                {
+                    
+                    Ground = Instantiate(Ground, Ground_Pos, Quaternion.identity);
+                    
+                    Ground.GetComponent<Grounddata>().Save_Location_Data(i, k, j);
+                    Ground.name = ("Ground[" + i + " , " +k + " , " + j + "]");
+                    Ground.transform.parent = this.transform;
+                    Ground_LIst[k][i].Add(Ground);
+                    Ground_Pos.z++; //블럭의 z 크기만큼    
+                }
+                Ground_Pos.z = 0;
+                Ground_Pos.x++; //블럭의 x 크기만큼
+               
             }
-            Ground_Pos.z = 0;
-            Ground_Pos.x++; //블럭의 x 크기만큼
         }
+       
     }
 
     public void guest_spawn()
@@ -274,15 +291,53 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+   
+   public bool Check_Upstair(Vector3 Location)
+    {
+        if (Ground_LIst[(int)(Location.y * 2) +1][(int)Location.x][(int)Location.z].transform.childCount!=0)
+        {
+            return false; 
+        }
+        else
+        {
+            return true;
+        }
+      
 
+    }
+    public bool Check_Downstair(Vector3 Location)
+    {
+        if (Ground_LIst[(int)(Location.y * 2) - 1][(int)Location.x][(int)Location.z].transform.childCount != 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+
+    }
+    public void Destroy_Ground(Vector3 Location)
+    {
+        if (Ground_LIst[(int)Location.y * 2][(int)Location.x][(int)Location.z].transform.childCount != 0)
+        {
+            Destroy(Ground_LIst[(int)Location.y * 2][(int)Location.x][(int)Location.z].transform.GetChild(0));
+           
+        }
+        return;
+    }
     void Park_State()
     {
         
 
     }
-
     public void Open_Rides_Select()
     {
         Ride_Select_Popup.SetActive(true);
+    }
+
+    public void Ground_dataset()
+    {
+
     }
 }

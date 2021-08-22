@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7272000961428677068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7272000961428677064}
+  - component: {fileID: 7272000961428677069}
+  - component: {fileID: 7272000961428677067}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7272000961428677064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272000961428677068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7272000961428677069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272000961428677068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2808ad8291dcf47b78554f2f12e497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ground: {fileID: 343908398654234252, guid: f236e9e69472b3a48b1a85d479e6c822, type: 3}
+  guest: {fileID: 3024539998183570299, guid: cd7e8323848b68149a94443fa2a0af91, type: 3}
+  Rename_Popup: {fileID: 0}
+  Ride_Select_Popup: {fileID: 0}
+  Guest_Num: 0
+  x: 10
+  z: 10
+  Guest_Select_Popup:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Select_Guest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Guest_Select: 000000000000
+  Camera_Mode: 0
+  Camera_Tracking:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Camera_Speed: 20
+  Base_Point:
+  - {fileID: 0}
+  - {fileID: 0}
+  Camera_Main: {fileID: 0}
+  Park_Name_text: {fileID: 0}
+  Park_Grade_text: {fileID: 0}
+  Park_Guest_text: {fileID: 0}
+  Park_Money_text: {fileID: 0}
+  Park_Date_text: {fileID: 0}
+  Park_Time_text: {fileID: 0}
+  Park_Temperature_text: {fileID: 0}
+  Park_Name: 
+  Park_Date: 
+  Park_Time: 
+  Park_Grade: 0
+  Park_Guest: 0
+  Park_Date_Year: 0
+  Park_Date_Month: 0
+  Park_Date_Day: 0
+  Park_Temperature: 0
+  Park_Money: 0
+  Park_Time_Hour: 0
+  Park_Time_Min: 0
+  Camera_Size: 10
+  Target:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &7272000961428677067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272000961428677068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a542827d2a3e6a34bb3386754cb35ed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ground_Center: {fileID: 343908398654234252, guid: f236e9e69472b3a48b1a85d479e6c822, type: 3}
