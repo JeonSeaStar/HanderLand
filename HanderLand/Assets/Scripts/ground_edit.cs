@@ -48,25 +48,29 @@ public class ground_edit : MonoBehaviour
                     switch (hit.collider.name)
                     {
                         case "quota_0":
-                            //not yet
+                            ground_code = 3;
+                            direction = 0;
                             break;
                         case "quota_1":
-                            //not yet
+                            ground_code = 3;
+                            direction = 3;
                             break;
                         case "quota_2":
-                            //not yet
+                            ground_code = 3;
+                            direction = 1;
                             break;
                         case "quota_3":
-                            //not yet
+                            ground_code = 3;
+                            direction = 2;
                             break;
                         case "half_0":
-                            ground_code = 2;
-                            direction = 0;
+                            ground_code = 3;
+                            direction = 2;
                             Edit_start = true;
                             break;
                         case "half_1":
                             ground_code = 2;
-                            direction = 2;
+                            direction = 0;
                             Edit_start = true;
                             break;
                         case "half_2":
@@ -100,7 +104,7 @@ public class ground_edit : MonoBehaviour
                 { 
                         MousePos = Input.mousePosition;
                       Debug.Log(hit.collider.name + "name");
-                      if (MousePos.y - Click_MousePos.y >= 5)
+                      if (MousePos.y - Click_MousePos.y >= 50)
                        {
                            if( GM.Check_Upstair(Parent_Vector))
                         {
@@ -113,7 +117,7 @@ public class ground_edit : MonoBehaviour
 
 
                         }
-                      else if (Click_MousePos.y - MousePos.y >= 5)
+                      else if (Click_MousePos.y - MousePos.y >= 50)
                        {
 
                         if (GM.Check_Downstair(Parent_Vector)==true)
