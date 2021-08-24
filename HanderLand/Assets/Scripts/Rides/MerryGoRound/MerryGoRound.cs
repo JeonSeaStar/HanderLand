@@ -17,13 +17,20 @@ public class MerryGoRound : Ride_State
         {
             NoPlace();
         }
+
+        rideColor();
     }
 
     void Update()
     {
-        Rotate();
-        Pak();
-        if(Place_Check == false && Input.GetMouseButtonDown(0)) { SetAblePosition(); }
+        if (Place_Check == true)
+        {
+            Rotate();
+            Pak();
+        }
+        //Rotate();
+        //Pak();
+        if (Place_Check == false && Input.GetMouseButtonDown(0)) { SetAblePosition(); }
         Ride_Position();
     }
 
@@ -101,15 +108,25 @@ public class MerryGoRound : Ride_State
             AblePosition.x += 1;
             EntExitPosition.Add(AblePosition);
         }
+    }
+
+    void rideColor()
+    {
+        Material aa = new Material(materials[0]);
+        Material bb = new Material(materials[1]);
+        Material cc = new Material(materials[2]);
+        Material dd = new Material(materials[3]);
+        Material ee = new Material(materials[4]);
+
 
         for (int i = 0; i < Parts.Length; i++)
         {
-            if (i >= 0 && i < 2) { Parts[i].GetComponent<Renderer>().material = materials[0]; }
-            else if (i >= 2 && i < 5) { Parts[i].GetComponent<Renderer>().material = materials[1]; }
-            else if (i >= 5 && i < 12) { Parts[i].GetComponent<Renderer>().material = materials[2]; }
-            else if (i >= 12 && i < 19) { Parts[i].GetComponent<Renderer>().material = materials[3]; }
-            else if (i >= 21 && i < 28) { Parts[i].GetComponent<Renderer>().material = materials[4]; }
-            else if (i >= 28 && i < 49) { Parts[i].GetComponent<Renderer>().material = materials[2]; }
+            if (i >= 0 && i < 2) { Parts[i].GetComponent<Renderer>().material = aa; }
+            else if (i >= 2 && i < 5) { Parts[i].GetComponent<Renderer>().material = bb; }
+            else if (i >= 5 && i < 13) { Parts[i].GetComponent<Renderer>().material = cc; }
+            else if (i >= 13 && i < 21) { Parts[i].GetComponent<Renderer>().material = dd; }
+            else if (i >= 21 && i < 29) { Parts[i].GetComponent<Renderer>().material = ee; }
+            else if (i >= 29 && i < Parts.Length) { Parts[i].GetComponent<Renderer>().material = bb; }
         }
     }
 }
