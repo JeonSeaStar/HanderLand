@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Ride_State : MonoBehaviour
 {
     public bool Place_Check = false;
+    public bool IsOpen = false;
+    public bool Music = false;
     public string Name_Original, Name_this;
     public float Price, Intensity, interest, Sickness_rate;
     public bool Research_Status, IsEntrance, IsExit;
@@ -13,15 +15,16 @@ public class Ride_State : MonoBehaviour
     public Texture Image;
     public Camera Camera;
     public List<Vector3> EntExitPosition;
+    public AudioSource audio_;
 
     void Start()
     {
-
+        //audio_ = this.gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
     {
-
+        PlayMusic();
     }
 
     void IsEntranceNExit()
@@ -51,5 +54,11 @@ public class Ride_State : MonoBehaviour
         {
             Place_Check = true;
         }
+    }
+
+    public void PlayMusic()
+    {
+        if (Music == true) { audio_.mute = false; }
+        else if (Music == false) { audio_.mute = true; }
     }
 }
