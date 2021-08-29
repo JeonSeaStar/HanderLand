@@ -101,6 +101,11 @@ public class Grounddata : MonoBehaviour
         this.Build_code = BuildCode;
     }
 
+    public int Get_Direction()
+    {
+        return this.direction;
+    }
+    
     /// <summary>
     ///  direction 0=>0   1=>90    2=>180   3=>270
     /// </summary>
